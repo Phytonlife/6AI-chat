@@ -4,6 +4,9 @@ import {
   Wrench, User, CheckCircle2, ChevronRight, MessageSquare, ArrowRight
 } from 'lucide-react';
 import { getWhatsAppLink } from '../data/landingData.ts';
+import massageImg from '../assets/images/massage_spa_studio_1790687061075.jpg';
+import restaurantImg from '../assets/images/restaurant_banquet_1790687074629.jpg';
+import retailGiftImg from '../assets/images/retail_boutique_gift_1790687111565.jpg';
 
 export const TargetAudienceAndCases: React.FC = () => {
   const [activeScenario, setActiveScenario] = useState<'massage' | 'restaurant' | 'shop'>('massage');
@@ -114,10 +117,11 @@ export const TargetAudienceAndCases: React.FC = () => {
 
                 <div className="lg:col-span-6">
                   <img
-                    src="/src/assets/images/massage_spa_studio_1790687061075.jpg"
+                    src={massageImg}
+                    onError={(e) => { e.currentTarget.src = '/images/massage.jpg'; }}
                     alt="Массажный салон интерьер"
                     className="w-full h-64 sm:h-72 object-cover rounded-2xl border border-neutral-300 shadow-md"
-                    referrerPolicy="no-referrer"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -142,10 +146,11 @@ export const TargetAudienceAndCases: React.FC = () => {
 
                 <div className="lg:col-span-6">
                   <img
-                    src="/src/assets/images/restaurant_banquet_1790687074629.jpg"
+                    src={restaurantImg}
+                    onError={(e) => { e.currentTarget.src = '/images/restaurant_banquet.jpg'; }}
                     alt="Банкетный зал ресторана"
                     className="w-full h-64 sm:h-72 object-cover rounded-2xl border border-neutral-300 shadow-md"
-                    referrerPolicy="no-referrer"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -170,10 +175,11 @@ export const TargetAudienceAndCases: React.FC = () => {
 
                 <div className="lg:col-span-6">
                   <img
-                    src="/src/assets/images/retail_boutique_gift_1790687111565.jpg"
+                    src={retailGiftImg}
+                    onError={(e) => { e.currentTarget.src = '/images/certificate.jpg'; }}
                     alt="Магазин подарков витрина"
                     className="w-full h-64 sm:h-72 object-cover rounded-2xl border border-neutral-300 shadow-md"
-                    referrerPolicy="no-referrer"
+                    loading="lazy"
                   />
                 </div>
               </div>

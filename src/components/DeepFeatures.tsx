@@ -4,6 +4,8 @@ import {
   CheckCircle2, Clock, ArrowRight, FileText, Send, Eye, Plus, ShoppingCart, Star
 } from 'lucide-react';
 import { HOT_LEADS_SAMPLE, REVIEWS_SAMPLE, getWhatsAppLink } from '../data/landingData.ts';
+import massageImg from '../assets/images/massage_spa_studio_1790687061075.jpg';
+import retailGiftImg from '../assets/images/retail_boutique_gift_1790687111565.jpg';
 
 interface DeepFeaturesProps {
   onOpenDemo: () => void;
@@ -380,10 +382,11 @@ export const DeepFeatures: React.FC<DeepFeaturesProps> = ({ onOpenDemo }) => {
                 {/* Item 1 */}
                 <div className="border border-neutral-200 rounded-xl p-3 flex gap-3 items-center hover:border-emerald-300 transition-colors">
                   <img
-                    src="/src/assets/images/massage_spa_studio_1790687061075.jpg"
+                    src={massageImg}
+                    onError={(e) => { e.currentTarget.src = '/images/massage.jpg'; }}
                     alt="Классический массаж"
                     className="w-16 h-16 rounded-lg object-cover shrink-0 bg-neutral-100"
-                    referrerPolicy="no-referrer"
+                    loading="lazy"
                   />
                   <div className="flex-1 min-w-0">
                     <h6 className="font-bold text-xs text-neutral-900 truncate">Классический массаж</h6>
@@ -403,10 +406,11 @@ export const DeepFeatures: React.FC<DeepFeaturesProps> = ({ onOpenDemo }) => {
                 {/* Item 2 */}
                 <div className="border border-neutral-200 rounded-xl p-3 flex gap-3 items-center hover:border-emerald-300 transition-colors">
                   <img
-                    src="/src/assets/images/retail_boutique_gift_1790687111565.jpg"
+                    src={retailGiftImg}
+                    onError={(e) => { e.currentTarget.src = '/images/certificate.jpg'; }}
                     alt="Подарочный сертификат"
                     className="w-16 h-16 rounded-lg object-cover shrink-0 bg-neutral-100"
-                    referrerPolicy="no-referrer"
+                    loading="lazy"
                   />
                   <div className="flex-1 min-w-0">
                     <h6 className="font-bold text-xs text-neutral-900 truncate">Подарочный сертификат</h6>
