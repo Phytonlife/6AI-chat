@@ -1,0 +1,6 @@
+{
+  "name": "6 AI — 6 инструментов в одном для бизнеса",
+  "description": "AI-администратор, AI-продавец, витрина, горячие лиды, обратная связь и аналитика в одной системе для бизнеса в Казахстане.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
